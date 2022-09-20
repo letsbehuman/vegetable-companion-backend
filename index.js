@@ -38,5 +38,10 @@ app.use('/api/users', routerUsers);
 
 //*home
 app.get('/', (req, res) => {
-  res.send('it is working');
+  db.select('*')
+  .from('vegetable_list')
+  .then((list) => {
+    res.json(list);
+  })
+  .catch((err) => console.log(err)
 });
