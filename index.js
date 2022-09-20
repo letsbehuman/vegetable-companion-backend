@@ -36,5 +36,5 @@ app.use('/api/users', routerUsers);
 
 //*home
 app.get('/api', (req, res) => {
-  res.send(database);
+  res.send('it is working');
 });
