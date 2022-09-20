@@ -40,3 +40,12 @@ app.use('/api/users', routerUsers);
 app.get('/', (req, res) => {
   res.send('it is working');
 });
+
+app.get('/api/vegetables', (req, res) => {
+  db.select('*')
+    .from('vegetable_list')
+    .then((list) => {
+      res.json(list);
+    })
+    .catch((err) => console.log(err));
+});
