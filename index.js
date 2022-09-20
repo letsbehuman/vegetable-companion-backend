@@ -9,6 +9,8 @@ const routerVegetables = require('./routers/vegetables');
 const routerVegetablesType = require('./routers/vegetablesTypes');
 const knex = require('knex');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 const db = knex({
   client: 'pg',
   connection: {
@@ -49,3 +51,5 @@ app.get('/api/vegetables', (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+// postgresql-metric-42319
+//postgres://gcqmyuveuanors:f7da7c37ef360f7dbe444916534857f0c46364c5c6e0e4643e7f2668558c8489@ec2-3-219-229-143.compute-1.amazonaws.com:5432/d2t8f8u3gd4san
