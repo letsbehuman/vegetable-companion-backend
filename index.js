@@ -12,13 +12,13 @@ const knex = require('knex');
 const db = knex({
   client: 'pg',
   connection: {
-    // connectionString:process.env.DATABASE_URL;
-    // ssl: true,
-    host: '127.0.0.1',
-    port: 5432,
-    user: 'postgres',
-    password: 'test',
-    database: 'vegetables',
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
+    // host: 'postgresql-metric-42319',
+    // port: 5432,
+    // user: 'postgres',
+    // password: 'test',
+    // database: 'vegetables',
   },
 });
 
