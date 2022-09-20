@@ -35,6 +35,6 @@ app.use('/api/vegetablesType', routerVegetablesType);
 app.use('/api/users', routerUsers);
 
 //*home
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   res.send('it is working');
 });
