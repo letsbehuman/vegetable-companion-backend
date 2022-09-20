@@ -35,7 +35,6 @@ app.use('/api/vegetablesType', routerVegetablesType);
 app.use('/api/users', routerUsers);
 
 //*home
-// app.get('/api', (req, res) => {
-//   res.send(db);
-
-// });
+app.get('/api', (req, res) => {
+  res.send(database);
+});
