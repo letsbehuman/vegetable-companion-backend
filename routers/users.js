@@ -118,8 +118,4 @@ routerUsers.put('/favorite', (req, res) => {
   }
 });
 
-// bcrypt.hash('a', null, null, function (err, hash) {});
-// bcrypt.compare('b', hash, function (err, res) {});
-// bcrypt.compare('a', hash, function (err, res) {});
-
 module.exports = routerUsers;

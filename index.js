@@ -38,10 +38,10 @@ app.use('/api/users', routerUsers);
 
 //*home
 app.get('/', (req, res) => {
-  db.select('*')
-  .from('vegetable_list')
-  .then((list) => {
-    res.json(list);
-  })
-  .catch((err) => console.log(err)
+db.select('*')
+    .from('vegetable_list')
+    .then((list) => {
+      res.json(list);
+    })
+    .catch((err) => console.log(err)
 });
