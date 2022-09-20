@@ -38,5 +38,5 @@ app.use('/api/users', routerUsers);
 
 //*home
 app.get('/', (req, res) => {
-  res.send('it is working');
+  res.send(res);
 });
