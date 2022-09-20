@@ -7,6 +7,18 @@ const { database } = require('./database');
 const routerUsers = require('./routers/users');
 const routerVegetables = require('./routers/vegetables');
 const routerVegetablesType = require('./routers/vegetablesTypes');
+const knex = require('knex');
+
+const db = knex({
+  client: 'pg',
+  connection: {
+    host: '127.0.0.1',
+    port: 5432,
+    user: 'postgres',
+    password: 'test',
+    database: 'vegetables',
+  },
+});
 
 app.use((req, res, next) => {
   console.log(`${new Date().toString()}=>${req.originalUrl} `);
@@ -23,6 +35,7 @@ app.use('/api/vegetablesType', routerVegetablesType);
 app.use('/api/users', routerUsers);
 
 //*home
-app.get('/api', (req, res) => {
-  res.send(database);
-});
+// app.get('/api', (req, res) => {
+//   res.send(db);
+
+// });
