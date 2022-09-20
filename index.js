@@ -32,9 +32,9 @@ app.listen(PORT, () => console.log(`it is alive son http://localhost:${PORT}`));
 app.use(express.json());
 app.use(cors());
 //Routers
-app.use('/api/vegetables', routerVegetables);
-app.use('/api/vegetablesType', routerVegetablesType);
-app.use('/api/users', routerUsers);
+// app.use('/api/vegetables', routerVegetables);
+// app.use('/api/vegetablesType', routerVegetablesType);
+// app.use('/api/users', routerUsers);
 
 //*home
 app.get('/', (req, res) => {
